@@ -1,6 +1,6 @@
 ﻿# Sleep Staging and Fragmentation Detection
 
-An exploratory neurotech project for automatic sleep stage classification and sleep fragmentation analysis using open polysomnography data from Sleep-EDF.
+An exploratory neurotech project for automatic sleep stage classification and sleep fragmentation analysis using open polysomnography data from sleep_edf.
 
 This project builds an end-to-end baseline pipeline that loads sleep annotations, converts hypnogram data into 30-second epoch labels, trains a baseline sleep stage classifier, and derives sleep fragmentation metrics from true and predicted stage sequences.
 
@@ -10,7 +10,7 @@ The project is designed as a portfolio-quality computational neuroscience / neur
 
 The goal of this project is to:
 
-- load raw Sleep-EDF hypnogram files;
+- load raw sleep_edf hypnogram files;
 - convert sleep annotations into epoch-level labels;
 - prepare EEG-derived sleep staging features;
 - train a baseline sleep stage classifier;
@@ -20,15 +20,13 @@ The goal of this project is to:
 
 ## Dataset
 
-This project uses a small subset of Sleep-EDF Expanded.
-
-For the current mini-version, the baseline experiments were run on a limited subset of subjects and sampled epochs to validate the full modeling pipeline before subset of Sleep-EDF Expanded.
+This project uses a small subset of sleep_edf Expanded.
 
 For the current mini-version, the baseline experiments were run on a limited subset of subjects and sampled epochs to validate the full modeling pipeline before scaling to a larger sample.
 
-Raw Sleep-EDF PSG files are not included in this repository. Small hypnogram EDF files used for annotation examples are stored in:
+Raw sleep_edf PSG files are not included in this repository. Small hypnogram EDF files used for annotation examples are stored in:
 
-`data/raw/sleep-edf/`
+`data/raw/sleep_edf/`
 
 Processed epoch-level tables and model outputs are stored in:
 
@@ -39,7 +37,7 @@ Processed epoch-level tables and model outputs are stored in:
 - `notebooks/01_data_loading_and_epoching.ipynb` - data loading, annotation mapping, and epoch table creation.
 - `notebooks/02_baseline_sleep_staging_clean.ipynb` - baseline sleep stage classification with EEG spectral features.
 - `notebooks/03_fragmentation_metrics.ipynb` - sleep fragmentation metrics from true and predicted stage sequences.
-- `data/raw/sleep-edf/` - small Sleep-EDF hypnogram files used in the mini-version.
+- `data/raw/sleep_edf/` - small sleep_edf hypnogram files used in the mini-version.
 - `data/processed/` - processed epoch tables, predictions, classification reports, and metrics.
 - `figures/` - visual results used for reporting and README.
 - `models/` - reserved for future trained model artifacts.
@@ -48,7 +46,7 @@ Processed epoch-level tables and model outputs are stored in:
 
 ## Methods
 
-- Sleep-EDF hypnogram processing
+- sleep_edf hypnogram processing
 - 30-second epoch label construction
 - Sleep stage mapping
 - EEG spectral feature preparation
@@ -62,7 +60,7 @@ Processed epoch-level tables and model outputs are stored in:
 
 ### 01 Data Loading and Epoching
 
-Loads PSG / hypnogram-related Sleep-EDF files, maps annotations to sleep stages, and creates a 30-second epoch-level dataset.
+Loads PSG / hypnogram-related sleep_edf files, maps annotations to sleep stages, and creates a 30-second epoch-level dataset.
 
 Main outputs:
 
@@ -173,7 +171,7 @@ Then run the notebooks in order from `01` to `03`.
 
 ## Future Work
 
-- Scale the baseline to more Sleep-EDF subjects.
+- Scale the baseline to more sleep_edf subjects.
 - Compare Random Forest with logistic regression and deep learning baselines.
 - Improve performance on minority stages such as N1.
 - Extend fragmentation analysis to larger subject cohorts.
@@ -194,3 +192,4 @@ Then run the notebooks in order from `01` to `03`.
 ## License
 
 This project is licensed under the MIT License.
+
