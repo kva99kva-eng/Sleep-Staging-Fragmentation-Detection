@@ -1,7 +1,7 @@
-﻿numpy
+numpy
 pandas
 matplotlib
 scipy
 scikit-learn
 mne
-jupyter
+jupyterlab

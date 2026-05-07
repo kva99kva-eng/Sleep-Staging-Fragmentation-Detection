@@ -1,26 +1,33 @@
-﻿# Python
+# Python
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
 
-# Virtual environment
+# Virtual environments
 .venv/
 venv/
 env/
 
 # Jupyter
 .ipynb_checkpoints/
+*/.ipynb_checkpoints/
 
-# Large/raw data
+# Raw and large data
 *.PSG.edf
+*.edf
+*.EDF
 data/raw/**/*.edf
+data/raw/**/*.EDF
 
-# OS
+# Model artifacts
+models/
+*.joblib
+*.pkl
+
+# OS / IDE
 .DS_Store
 Thumbs.db
-
-# IDE
 .vscode/
 .idea/
 
