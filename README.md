@@ -130,20 +130,51 @@ This project demonstrates skills relevant to sleep-tech, neurotechnology and com
 
 ```text
 Sleep-Staging-Fragmentation-Detection/
-├── data/
-│   ├── raw/
-│   └── processed/
-├── figures/
-├── notebooks/
-│   ├── 01_data_loading_and_epoching.ipynb
-│   ├── 02_baseline_sleep_staging_clean.ipynb
-│   └── 03_fragmentation_metrics.ipynb
-├── .gitattributes
-├── .gitignore
-├── LICENSE
-├── README.md
-└── requirements.txt
+|-- .github/
+|   `-- workflows/
+|       `-- tests.yml
+|-- data/
+|   |-- raw/
+|   `-- processed/
+|-- figures/
+|   |-- SC4001_hypnogram.png
+|   |-- baseline_confusion_matrix_mini.png
+|   |-- fragmentation_index_true_vs_pred_mini.png
+|   `-- fragmentation_index_scatter_mini.png
+|-- notebooks/
+|   |-- 01_data_loading_and_epoching.ipynb
+|   |-- 02_baseline_sleep_staging_clean.ipynb
+|   `-- 03_fragmentation_metrics.ipynb
+|-- tests/
+|   |-- test_artifacts.py
+|   |-- test_notebooks.py
+|   |-- test_project_structure.py
+|   `-- test_readme_quality.py
+|-- .gitattributes
+|-- .gitignore
+|-- LICENSE
+|-- README.md
+`-- requirements.txt
 ```
+
+
+## Quality and Reproducibility
+
+This repository is structured as a reproducible notebook-based sleep-tech analysis project.
+
+| Component | Purpose |
+|---|---|
+| `notebooks/` | Step-by-step workflow for data loading, baseline modeling and fragmentation analysis |
+| `data/processed/` | Generated epoch-level features, predictions and fragmentation metrics |
+| `figures/` | Saved visual outputs used in the README |
+| `tests/` | Automated checks for project structure, notebooks, figures, processed artifacts and README quality |
+| GitHub Actions | Runs the test suite automatically on push and pull request |
+| `.gitignore` | Keeps local caches and large generated files out of the repository |
+
+Current local test status:
+
+`11 passed`
+
 
 ## Installation
 
@@ -216,7 +247,8 @@ The correct interpretation is:
 - Add subject-level error analysis.
 - Add true-vs-predicted hypnogram comparisons.
 - Extend fragmentation analysis to larger subject cohorts.
-- Add tests for epoch mapping and fragmentation metrics.
+- Add dedicated Python modules for epoch mapping and fragmentation metrics if the project grows beyond notebook form.
+
 
 ## Tech Stack
 
