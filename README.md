@@ -1,5 +1,7 @@
 # Sleep Staging and Fragmentation Detection
 
+[![Tests](https://github.com/kva99kva-eng/Sleep-Staging-Fragmentation-Detection/actions/workflows/tests.yml/badge.svg)](https://github.com/kva99kva-eng/Sleep-Staging-Fragmentation-Detection/actions/workflows/tests.yml)
+
 Exploratory sleep-staging and sleep-fragmentation analysis using open Sleep-EDF polysomnography data.
 
 This project is designed as a portfolio-ready computational neuroscience / sleep-tech case study. It demonstrates how to transform Sleep-EDF annotations into epoch-level labels, train a baseline sleep-stage classifier, and translate predicted stage sequences into interpretable sleep-fragmentation metrics.
